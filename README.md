@@ -26,5 +26,5 @@ Start the server using `npm start` **or** dev server with `npm run dev`.
   Sign Up page
 - _/spoof/dashboard_:
   Dashboard (post login)
-- _/spoof/redirect_:
+- _/redirect_:
   For redirecting users
