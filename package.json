@@ -1,0 +1,32 @@
+{
+  "name": "foxy-url-shortener",
+  "version": "1.0.0",
+  "description": "A tricky url shortener",
+  "scripts": {
+    "start": "node server.js",
+    "start-dev": "nodemon --watch server.js",
+    "sass": "sass --style compressed --no-source-map -w -c src/styles:public/css",
+    "minify": "node utils/minify.js",
+    "dev": "concurrently \"npm run start-dev\" \"npm run sass\" \"npm run minify\""
+  },
+  "keywords": [],
+  "author": "saurabh verma",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "concurrently": "^8.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pug": "^3.0.2",
+    "request-ip": "^3.3.0",
+    "simple-json-db": "^2.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.3",
+    "terser": "^5.19.3"
+  }
+}

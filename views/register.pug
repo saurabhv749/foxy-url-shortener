@@ -1,0 +1,56 @@
+html
+  head
+    title Register | Foxy URL Shortener
+    link(rel="stylesheet", href="/css/base.css")
+    link(rel="stylesheet", href="/css/register.css")
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+    link(rel="manifest", href="/site.webmanifest")
+  body
+    main 
+      .container 
+        header
+          h1 <img src="/images/foxy_logo.png", alt="site logo">Foxy URL Shortener
+        
+        .form__container 
+          p 
+            strong Fill out the form to register on this platform.
+          form(action="/api/register" method="post" id='register-form')
+            label(for="username") Username:
+            input(type="text" id="username" name="username" required)
+            
+            label(for="password") Password:
+            input(type="password" id="password" name="password" required)
+            
+            p
+              input(type="checkbox" id="agree-checkbox" name="agree" required style-inline) 
+              label(for="agree-checkbox" style-inline) I have read and agree to the <a href="#terms-and-conditions">terms and conditions</a>.
+            
+            input(type="submit" value="Create Account" class="btn btn-secondary")
+
+          .links Already have an account?
+            a(href="/spoof/login") Login Here
+        
+        .info__container 
+          #terms-and-conditions 
+            h2 Terms and Conditions 
+            hr
+            h3 🔒 Important Account Security Notice 🔒
+            br
+            h4 Protect Your Login Credentials!
+            p Once registered, your login credentials cannot be recovered if lost. We do not offer a password recovery option. If you forget or misplace your login information, you'll need to register again to access your account.
+            p To ensure uninterrupted access:
+            h5 ✅ Save Your Credentials:
+            p Keep your username and password in a secure place.
+            h5 ✅ Choose Strong Passwords:
+            p Create a robust password with a mix of letters, numbers, and symbols.
+            h5 ✅ No Recovery Option:
+            p Remember, we do not provide any account recovery assistance.
+            p Take this opportunity to safeguard your access. Thank you for understanding and prioritizing your account's security.
+            br
+            p
+              strong -- Team Foxy URL
+    .notification__container 
+      p#message lslsl
+    script(src="/js/register.js") 

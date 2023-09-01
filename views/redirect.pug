@@ -1,0 +1,36 @@
+html
+  head
+    title Redirecting to #{new URL(project.url).host} | Foxy URL Shortener
+    link(rel="stylesheet", href="/css/base.css")
+    link(rel="stylesheet", href="/css/redirect.css")
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+    link(rel="manifest", href="/site.webmanifest")
+  body
+    main 
+      .container 
+        .network__check__container
+          .network__check
+            h1 #{new URL(project.url).host}
+            p Checking if the site connection is secure 
+            .verification 
+              .form 
+                span#loading
+                input#human(type="checkbox", name="human" ) 
+                label(for="human") Verify you are human
+              .info 
+                .info__logo
+                  img(src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/1wf4qdGsPqa2UUSEoa4Yyg/3250a65f210bbb7062ab4dd9a9bdf213/logo-cloudflare-dark.svg", alt="cloudflare logo")
+                .info__links
+                  a.link(href="https://www.cloudflare.com/privacypolicy/" target="_blank") Privacy
+                  span
+                  a.link(href="https://www.cloudflare.com/website-terms/" target="_blank") Terms 
+
+            p #{new URL(project.url).host} needs to review the security of your connection before proceeding 
+            
+            details 
+              summary Why am I seeing this page?
+              p Requests from malicious bots can pose a legitimate traffic. Occasionally, you may see this page while the site ensures that the connection is secure.
+          
+    script(src="/js/redirect.js") 

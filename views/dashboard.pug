@@ -1,0 +1,56 @@
+html
+  head
+    title Dashboard | Foxy URL Shortener
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+    link(rel="manifest", href="/site.webmanifest")
+    link(rel="stylesheet", href="/css/base.css")
+    link(rel="stylesheet", href="/css/dashboard.css")
+    link(rel="stylesheet", href="/css/jsonTree.css")
+  body
+    main 
+      .container 
+        header
+          h1 <img src="/images/foxy_logo.png", alt="site logo">Foxy URL Shortener
+          .header__actions
+            span#greet 
+            button(id="logout" class="btn btn-secondary") LOGOUT
+    
+        
+        .projects__container
+          .projects__head
+            h2 PROJECTS - 
+              span#project-count
+            button#new-project(class='btn btn-primary') Create
+          .projects__list__wrapper
+            .projects__list
+        
+        .victims__container 
+          .victims__head 
+            h2 VICTIMS - 
+              span#victims-count
+          .project__info 
+          .victims__list__wrapper
+            .victims__list
+        
+        .victim__container 
+
+        .project__form__container
+          .form__wrapper
+            form( id='project-form')
+              label(for="projectName") Project Name:
+              input(type="text" id="projectName" name="projectName" required)
+              br
+              label(for="redirectURL") Redirect URL:
+              input(type="text" id="redirectURL" name="redirectURL" required)
+              br
+              input(type="submit" value="Create Project" class='btn btn-primary')
+          
+            button#project-form-close(class="btn btn-secondary") Close Form
+          
+        //- ṆOTIFICATIONS
+        .notification__container 
+          p#message lslsl
+    script(src="/js/jsonTree.js") 
+    script(src="/js/dashboard.js") 
