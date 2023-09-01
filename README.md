@@ -14,8 +14,11 @@ A text editor, preferably VS Code.
 ## Getting Started
 
 Clone the repository to your local machine.
-create a `.env` file in the root **or** add `ACCESS_TOKEN_SECRET` and `REFRESH_TOKEN_SECRET` to environment variable
+
+Create a `.env` file in the root **or** add `ACCESS_TOKEN_SECRET` and `REFRESH_TOKEN_SECRET` to environment variables.
+
 Install the dependencies using `npm install`.
+
 Start the server using `npm start` **or** dev server with `npm run dev`.
 
 ## Routes
