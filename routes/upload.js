@@ -1,9 +1,13 @@
 const express = require("express");
 const path = require("path");
+const fs = require("fs");
 const multer = require("multer");
 const validateOrigin = require("../middleware/validateOrigin");
 
 const uploadFolder = path.join(__dirname, "..", "uploads");
+if (!fs.existsSync(uploadFolder)) {
+  fs.mkdirSync(uploadFolder);
+}
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
